@@ -33,9 +33,22 @@ class LoginFragment : Fragment() {
         binding.viewModel = viewModel
 
         binding.signUp.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToDetailsFragment()
-            findNavController().navigate(action)
+            if (entryVaild()){
+
+
+                val action = LoginFragmentDirections.actionLoginFragmentToDetailsFragment()
+                findNavController().navigate(action)
+            }
+
         }
+    }
+
+
+    fun entryVaild():Boolean{
+        return viewModel.isVaildEntry(
+            binding.editFirstName.text.toString(),binding.editLastName.text.toString(),
+            binding.editEmail.text.toString(),binding.editPhoneNumber.text.toString()
+        )
     }
 
 

@@ -32,6 +32,9 @@ class DetailsFragment : Fragment() {
         binding.viewModel = viewModel
 
         binding.Back.setOnClickListener {
+
+            viewModel.rasterData()
+
             val action = DetailsFragmentDirections.actionDetailsFragmentToLoginFragment()
             findNavController().navigate(action)
         }
