@@ -4,6 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="viewModel"
+            type="com.example.taskapp.ItemViewModel" />
 
     </data>
 
@@ -52,6 +55,7 @@
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:text="@{viewModel.firstName}"
             app:layout_constraintTop_toBottomOf="@id/welcome"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
@@ -64,6 +68,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="20sp"
+            android:text="@{viewModel.email}"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/first_name"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
@@ -77,6 +82,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="20sp"
+            android:text="@{viewModel.phoneNumber}"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/email"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
