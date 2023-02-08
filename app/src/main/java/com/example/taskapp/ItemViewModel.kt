@@ -8,7 +8,7 @@ class ItemViewModel : ViewModel() {
     val firstName = MutableLiveData<String>()
     val lastName = MutableLiveData<String>()
     val email = MutableLiveData<String>()
-    val phoneNumber = MutableLiveData<Int>()
+    val phoneNumber = MutableLiveData<String>()
 
 
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.taskapp.databinding.FragmentLoginBinding
 
@@ -13,6 +14,8 @@ import com.example.taskapp.databinding.FragmentLoginBinding
 class LoginFragment : Fragment() {
 
     private lateinit var binding : FragmentLoginBinding
+
+    private val viewModel : ItemViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -26,6 +29,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.viewModel = viewModel
 
         binding.signUp.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToDetailsFragment()
