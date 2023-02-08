@@ -10,5 +10,25 @@ class ItemViewModel : ViewModel() {
     val email = MutableLiveData<String>()
     val phoneNumber = MutableLiveData<String>()
 
+    init {
+        rasterData()
+    }
+
+
+    fun rasterData(){
+
+        firstName.value = ""
+        lastName.value = ""
+        email.value = ""
+        phoneNumber.value = ""
+
+    }
+
+    fun isVaildEntry(firstName:String,lastName:String,email:String,phoneNumber :String): Boolean{
+        return firstName.isNotBlank() && lastName.isNotBlank() &&
+                email.isNotBlank()&& phoneNumber.isNotBlank()
+
+    }
+
 
 }
