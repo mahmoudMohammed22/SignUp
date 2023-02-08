@@ -10,6 +10,9 @@
     <string name="name"> Name: %s %s</string>
     <string name="email_text"> Email: %s </string>
     <string name="phone_number"> Phone: %s</string>
+    <string name="signup">SignUp</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome_in_my_app">Welcome in my app</string>
 
 
 </resources>

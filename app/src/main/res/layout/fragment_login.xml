@@ -10,11 +10,33 @@
 
     </data>
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
         tools:context=".LoginFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".2" />
+
+        <TextView
+            android:id="@+id/Sign_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="@dimen/bigText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     <!--to putting edit text about name-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/first_name"
@@ -23,7 +45,7 @@
         android:layout_margin="7dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal">
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -108,7 +130,8 @@
             app:layout_constraintTop_toBottomOf="@+id/phone_number"
             app:layout_constraintEnd_toEndOf="@id/phone_number"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Sign up"
+            android:text="@string/sign_up"
+            android:textSize="@dimen/small_text"
             android:textColor="@color/white"
             android:textAllCaps="false" />
 

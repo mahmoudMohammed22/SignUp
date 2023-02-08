@@ -14,12 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".1" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_vertical_start"
@@ -39,26 +34,29 @@
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome in my app "
+            android:text="@string/welcome_in_my_app"
             android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="30sp"
+            android:textSize="@dimen/bigText"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
             />
 
         <TextView
-            android:id="@+id/first_name"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="20sp"
+            android:textSize="@dimen/mediumtext"
             android:textStyle="bold"
             android:text="@{@string/name(viewModel.firstName,viewModel.lastName)}"
             app:layout_constraintTop_toBottomOf="@id/welcome"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toBottomOf="@+id/email"
+
             tools:text="Name : "
             />
 
@@ -67,12 +65,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="20sp"
+            android:textSize="@dimen/mediumtext"
             android:text="@{@string/email_text(viewModel.email)}"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/first_name"
+            app:layout_constraintTop_toBottomOf="@id/name"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toTopOf="@+id/phone"
             tools:text="Email : "
             />
 
@@ -81,12 +80,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="20sp"
+            android:textSize="@dimen/mediumtext"
             android:text="@{@string/phone_number(viewModel.phoneNumber)}"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/email"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
+            app:layout_constraintBottom_toTopOf="@+id/Back"
             tools:text="Phone : "
             />
 
@@ -98,7 +98,9 @@
             app:layout_constraintTop_toBottomOf="@+id/phone"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:text="Logout"
+            android:textSize="@dimen/small_text"
             android:textColor="@color/white"
             android:textAllCaps="false" />
 
