@@ -48,30 +48,24 @@
             android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="@dimen/mediumtext"
-            android:textStyle="bold"
             android:text="@{@string/name(viewModel.firstName,viewModel.lastName)}"
             app:layout_constraintTop_toBottomOf="@id/welcome"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
             app:layout_constraintBottom_toBottomOf="@+id/email"
-
             tools:text="Name : "
-            />
+            style="@style/NormalText" />
 
         <TextView
             android:id="@+id/email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="@dimen/mediumtext"
             android:text="@{@string/email_text(viewModel.email)}"
-            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/name"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
             app:layout_constraintBottom_toTopOf="@+id/phone"
+            style="@style/NormalText"
             tools:text="Email : "
             />
 
@@ -79,14 +73,12 @@
             android:id="@+id/phone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="@dimen/mediumtext"
             android:text="@{@string/phone_number(viewModel.phoneNumber)}"
-            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/email"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
             app:layout_constraintBottom_toTopOf="@+id/Back"
+            style="@style/NormalText"
             tools:text="Phone : "
             />
 
@@ -98,7 +90,6 @@
             app:layout_constraintTop_toBottomOf="@+id/phone"
             app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
             app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:text="Logout"
             android:textSize="@dimen/small_text"
             android:textColor="@color/white"
