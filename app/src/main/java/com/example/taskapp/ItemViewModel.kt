@@ -25,6 +25,7 @@ class ItemViewModel : ViewModel() {
 
     }
 
+    // TO Sure data is not empty when nav in details screen
     fun isVaildEntry(firstName:String,lastName:String,email:String,phoneNumber :String): Boolean{
         return firstName.isNotBlank() && lastName.isNotBlank() &&
                 email.isNotBlank()&& phoneNumber.isNotBlank()
