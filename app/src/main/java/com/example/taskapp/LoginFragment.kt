@@ -35,6 +35,8 @@ class LoginFragment : Fragment() {
 
         binding.signUp.setOnClickListener {
             if (entryVaild()){
+
+                //to navigation to Details screen
                 val action = LoginFragmentDirections.actionLoginFragmentToDetailsFragment()
                 findNavController().navigate(action)
             }
@@ -47,6 +49,7 @@ class LoginFragment : Fragment() {
 
 
 
+    // Until we make sure that the user enters the data
     fun entryVaild():Boolean{
         return viewModel.isVaildEntry(
             binding.editFirstName.text.toString(),binding.editLastName.text.toString(),

@@ -33,8 +33,11 @@ class DetailsFragment : Fragment() {
 
         binding.Back.setOnClickListener {
 
+            // to make data in viewModel is empty
+
             viewModel.rasterData()
 
+            //to navigation to Login screen
             val action = DetailsFragmentDirections.actionDetailsFragmentToLoginFragment()
             findNavController().navigate(action)
         }

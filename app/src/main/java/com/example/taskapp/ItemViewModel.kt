@@ -11,6 +11,7 @@ class ItemViewModel : ViewModel() {
     val phoneNumber = MutableLiveData<String>()
 
     init {
+        // to make data empty
         rasterData()
     }
 
